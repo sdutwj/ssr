@@ -1,3 +1,4 @@
+service crond start; /usr/sbin/sshd -D
 yum update
 yum install -y git
 cd ~
