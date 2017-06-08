@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM ubuntu:14.04
 MAINTAINER wangjian
 
 RUN apt-get update
