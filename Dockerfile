@@ -1,11 +1,11 @@
 FROM centos:latest
 MAINTAINER wangjian
-RUN yum install -y openssh-server openssh-clients
-RUN echo 'root:wangjian' | chpasswd
-RUN sed -i 's/#PermitRootLogin yes/PermitRootLogin yes/' /etc/ssh/sshd_config
-RUN service sshd start &&  service sshd stop
-EXPOSE 22
-CMD ["/usr/sbin/sshd", "-D"]
+#RUN yum install -y openssh-server openssh-clients
+#RUN echo 'root:wangjian' | chpasswd
+#RUN sed -i 's/#PermitRootLogin yes/PermitRootLogin yes/' /etc/ssh/sshd_config
+#RUN service sshd start &&  service sshd stop
+#EXPOSE 22
+#CMD ["/usr/sbin/sshd", "-D"]
 EXPOSE 8989
 RUN yum install -y git
 RUN git clone https://github.com/shadowsocksr/shadowsocksr.git
