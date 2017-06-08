@@ -9,6 +9,7 @@ MAINTAINER wangjian
 EXPOSE 8989
 RUN yum install -y git
 RUN git clone https://github.com/shadowsocksr/shadowsocksr.git
-RUN cd ~/shadowsocksr/shadowsocksr && ./initcfg.sh
-RUN echo "python ~/shadowsocksr/shadowsocksr/server.py -p 8989 -k wangjian -m aes-128-cfb -O auth_aes128_md5 -o tls1.2_ticket_auth_compatible -d start" >> ~/run.sh
-CMD ["python"," ~/shadowsocksr/shadowsocksr/server.py","-p","8989","-k","wangjian","-m","aes-128-cfb","-O","auth_aes128_md5","-o","tls1.2_ticket_auth_compatible","-d","start"]
+RUN ls -l
+RUN cd ~/shadowsocksr/shadowsocks && ./initcfg.sh
+RUN echo "python ~/shadowsocksr/shadowsocks/server.py -p 8989 -k wangjian -m aes-128-cfb -O auth_aes128_md5 -o tls1.2_ticket_auth_compatible -d start" >> ~/run.sh
+CMD ["python"," ~/shadowsocksr/shadowsocks/server.py","-p","8989","-k","wangjian","-m","aes-128-cfb","-O","auth_aes128_md5","-o","tls1.2_ticket_auth_compatible","-d","start"]
