@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM tutum/centos:centos7
 MAINTAINER wangjian
 EXPOSE 22 
 EXPOSE 8989
