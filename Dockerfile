@@ -52,5 +52,4 @@ RUN echo "python /shadowsocksr/shadowsocks/server.py -p 8989 -k wangjian -m aes-
 RUN echo "root:password" | chpasswd
 
 EXPOSE 22
-EXPOSE 8989
 CMD service crond start; /usr/sbin/sshd -D
